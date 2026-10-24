@@ -12,9 +12,6 @@ Agente de voz para quem trabalha em rodovias, com quatro agentes e acesso por pe
 ![Python](https://img.shields.io/badge/Python-voz%20offline-1b2e49?style=flat-square&logo=python&logoColor=white)
 ![Status](https://img.shields.io/badge/status-em%20desenvolvimento-f5c266?style=flat-square)
 
-**Challenge Motiva · FIAP · Front End & Mobile Development · Turma 2TIAPR**
-
-Repositório: https://github.com/fiap-projectxs/Sprint-1---Front-End-Mobile-Development
 
 </div>
 
@@ -153,4 +150,4 @@ raly-local/     servidor local de voz (Piper + Whisper) e ponte para o Ollama
 | Rodrigo Wolkoff Giorgi | 556980 |
 | Carlos Eduardo Mamede | 568269 |
 
-Disciplina: Front End & Mobile Development · FIAP · Turma 2TIAPR.
+Disciplina: Front End & Mobile Development - Turma 2TIAPR.
