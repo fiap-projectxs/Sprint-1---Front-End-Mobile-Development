@@ -1,0 +1,105 @@
+/* Tema escuro + vidro (estética do Smart Desk). Carregado depois de index.css; só redefine variáveis e superfícies. */
+:root {
+  --navy: #ffffff;
+  --navy-2: #14233a;
+  --roxo: #0b6f86;
+  --roxo-escuro: #7fe0f0;
+  --roxo-claro: rgba(95, 208, 230, 0.16);
+  --fundo: #1b2e49;
+  --card: rgba(255, 255, 255, 0.05);
+  --texto: #ffffff;
+  --suave: #adb4be;
+  --borda: rgba(173, 180, 190, 0.18);
+  --ok: #4ade9b; --ok-bg: rgba(74, 222, 155, 0.14);
+  --info: #5fd0e6; --info-bg: rgba(95, 208, 230, 0.16);
+  --alerta: #f5c266; --alerta-bg: rgba(245, 194, 102, 0.14);
+  --erro: #ff7b85; --erro-bg: rgba(255, 123, 133, 0.14);
+  --sombra: 0 8px 30px rgba(0, 0, 0, 0.35);
+  --vidro-desfoque: blur(16px) saturate(140%);
+  color-scheme: dark;
+}
+body {
+  background:
+    radial-gradient(900px 520px at 85% -10%, rgba(95, 208, 230, 0.18), transparent 60%),
+    radial-gradient(800px 480px at -10% 10%, rgba(63, 179, 204, 0.14), transparent 55%),
+    radial-gradient(700px 400px at 50% 110%, rgba(127, 224, 240, 0.10), transparent 60%),
+    #1b2e49;
+  background-attachment: fixed;
+}
+.header { background: rgba(20, 35, 58, 0.72); backdrop-filter: var(--vidro-desfoque); border-bottom: 1px solid var(--borda); }
+.nav { background: rgba(20, 35, 58, 0.55); backdrop-filter: var(--vidro-desfoque); border-right: 1px solid var(--borda); }
+.nav__contagem { background: var(--roxo); color: #fff; }
+.card, .kpi, .modulo {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--borda);
+  backdrop-filter: var(--vidro-desfoque);
+  -webkit-backdrop-filter: var(--vidro-desfoque);
+  box-shadow: var(--sombra);
+}
+.card::before, .kpi::before, .modulo::before { background: linear-gradient(90deg, #7fe0f0, #5fd0e6 50%, #3fb3cc); }
+.modulo__icone { background: linear-gradient(135deg, #5fd0e6, #3fb3cc); }
+.btn--secundario, .btn--claro { background: rgba(255, 255, 255, 0.08); color: var(--texto); border-color: var(--borda); }
+.btn--primario { background: linear-gradient(135deg, #0b6f86, #0f8aa6); }
+.btn--primario:hover:not(:disabled) { background: linear-gradient(135deg, #12a0bd, #3fb3cc); }
+.campo input, .campo select, .campo textarea, .chat__form input, .tabela select {
+  background: rgba(20, 35, 58, 0.6); color: var(--texto); border-color: var(--borda);
+}
+.tabela tbody tr:nth-child(even) { background: rgba(255, 255, 255, 0.03); }
+.tabela th { background: rgba(95, 208, 230, 0.18); color: var(--texto); }
+.tabela__linha:hover { background: rgba(95, 208, 230, 0.16) !important; }
+code { background: rgba(95, 208, 230, 0.16); color: #d6f3f9; }
+.selo-demo { background: rgba(95, 208, 230, 0.2); border-color: rgba(127, 224, 240, 0.5); }
+
+/* Ecossistema de agentes */
+.agentes__titulo { display: flex; gap: 16px; align-items: center; }
+.agente-card h2 { display: flex; align-items: center; gap: 8px; }
+.agente-card__acoes { display: flex; gap: 10px; flex-wrap: wrap; margin-top: auto; }
+.agente-detalhe { display: flex; flex-direction: column; gap: 16px; }
+.selo-acesso { display: inline-flex; align-items: center; gap: 5px; font-size: 0.75rem; font-weight: 700; padding: 4px 10px; border-radius: 999px; background: var(--alerta-bg); color: var(--alerta); border: 1px solid currentColor; }
+.selo-acesso--ok { background: var(--ok-bg); color: var(--ok); }
+.lista-check { display: grid; gap: 8px; }
+.lista-check li { display: flex; gap: 8px; align-items: flex-start; }
+.lista-check svg { margin-top: 3px; flex-shrink: 0; color: var(--ok); }
+.lista-check--nao svg { color: var(--erro); }
+.agente-lp { display: grid; gap: 14px; padding: 8px; }
+.agente-lp__topo { display: flex; align-items: center; gap: 12px; }
+.agente-lp__topo svg { color: #7fe0f0; }
+.agente-lp__publico { font-size: .85rem; color: #adb4be; display: flex; gap: 6px; align-items: center; }
+.agente-lp__cmd { display: flex; flex-wrap: wrap; gap: 8px; }
+.agente-lp__cmd span { background: rgba(122,167,255,.14); border: 1px solid rgba(122,167,255,.3); border-radius: 999px; padding: 4px 12px; font-size: .85rem; color: #d6f3f9; }
+.lp__ecossistema { text-align: center; padding: clamp(48px,8vw,100px) 16px 0; display: grid; gap: 14px; justify-items: center; }
+.lp__ecossistema p { max-width: 640px; color: #d3d9e2; }
+.lp__fluxo { display: flex; gap: 10px; flex-wrap: wrap; justify-content: center; margin-top: 8px; }
+.lp__fluxo button { display: flex; gap: 8px; align-items: center; background: rgba(255,255,255,.06); border: 1px solid rgba(122,167,255,.3); color: #fff; font: inherit; border-radius: 999px; padding: 8px 16px; cursor: pointer; }
+.lp__fluxo button:hover { background: rgba(122,167,255,.2); }
+
+/* Fundo 3D global: canvas fixo atrás de tudo; o conteúdo fica por cima, com superfícies translúcidas. */
+.fundo3d { position: fixed; inset: 0; z-index: -1; pointer-events: none; }
+html, body { background: #1b2e49; }
+body { background-attachment: fixed; }
+.lp { background: transparent !important; }
+.lp__topo { background: rgba(20, 35, 58, 0.6) !important; }
+.lp__hero, .lp__faixa, .lp__final { background: transparent !important; }
+.palco, .painel-vidro { background: rgba(20, 35, 58, 0.62) !important; backdrop-filter: blur(14px); }
+/* Legibilidade: texto claro em todas as superfícies e sem fundo branco em lugar nenhum. */
+.conteudo, .conteudo p, .conteudo li, .conteudo td, .conteudo label { color: var(--texto); }
+.conteudo .texto-suave, .card__sub { color: var(--suave); }
+input, select, textarea { color-scheme: dark; }
+::placeholder { color: #8a97a8; opacity: 1; }
+
+/* Raly flutuante: painel de vidro escuro com mascote 3D e brilho. */
+.dock { background: rgba(20, 35, 58, 0.78) !important; backdrop-filter: blur(18px) saturate(140%); border: 1px solid rgba(95, 208, 230, 0.35) !important; box-shadow: 0 0 0 1px rgba(127, 224, 240, 0.12), 0 10px 40px rgba(11, 111, 134, 0.35), 0 0 60px rgba(63, 179, 204, 0.25) !important; }
+.dock__alca { background: linear-gradient(135deg, rgba(11, 111, 134, 0.35), rgba(63, 179, 204, 0.3)) !important; color: #fff !important; min-height: 64px; }
+.dock__rosto { width: 56px; height: 56px; margin: -6px 0; filter: drop-shadow(0 0 14px rgba(127, 224, 240, 0.55)); }
+.dock__estado { color: #7fe0f0 !important; }
+
+/* Superfícies que usavam --navy como fundo escuro (agora --navy é o texto claro). */
+.fluxo__num { background: linear-gradient(135deg, #0b6f86, #0f8aa6); }
+.toast { background: rgba(20, 35, 58, 0.92); border: 1px solid var(--borda); backdrop-filter: blur(12px); }
+.marca-fundo--escuro { background: #14233a; }
+
+/* Demo de voz na apresentação */
+.lp__voz { padding: clamp(32px, 6vw, 80px) clamp(16px, 5vw, 72px); display: grid; justify-items: center; }
+.lp__voz-cartao { max-width: 760px; width: 100%; display: grid; gap: 14px; padding: clamp(20px, 4vw, 36px) !important; }
+.lp__voz-cartao h2 { font-size: clamp(1.6rem, 3.5vw, 2.4rem); }
+.lp__voz-cartao p { color: #d3d9e2; margin: 0; }

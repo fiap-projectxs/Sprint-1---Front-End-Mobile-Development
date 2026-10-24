@@ -1,0 +1,20 @@
+{
+  "perfis": {
+    "feminina":  { "rotulo": "Raly Feminina",  "descricao": "Voz feminina offline (tom elevado)", "voz": "pt_BR-faber-medium",  "velocidade": 0.85, "variacao": 0.667, "tom": 1.18 },
+    "padrao":    { "rotulo": "Raly Padrão",    "descricao": "Voz clara, ritmo normal",         "voz": "pt_BR-faber-medium",   "velocidade": 1.0,  "variacao": 0.667 },
+    "motorista": { "rotulo": "Raly Motorista", "descricao": "Companheiro de estrada, direto",  "voz": "pt_BR-cadu-medium",    "velocidade": 1.0,  "variacao": 0.667 },
+    "alerta":    { "rotulo": "Raly Alerta",    "descricao": "Mais rápido, para ocorrências",   "voz": "pt_BR-jeff-medium",    "velocidade": 1.15, "variacao": 0.6 },
+    "noturno":   { "rotulo": "Raly Noturno",   "descricao": "Mais lento e calmo, viagem longa", "voz": "pt_BR-edresson-low",   "velocidade": 0.87, "variacao": 0.667 }
+  },
+  "vozes": {
+    "pt_BR-faber-medium":   "pt/pt_BR/faber/medium",
+    "pt_BR-cadu-medium":    "pt/pt_BR/cadu/medium",
+    "pt_BR-jeff-medium":    "pt/pt_BR/jeff/medium",
+    "pt_BR-edresson-low":   "pt/pt_BR/edresson/low"
+  },
+  "llm": {
+    "url": "http://127.0.0.1:11434",
+    "modelo": "",
+    "sistema": "Você é o Raly, assistente de rodovias de uma demonstração acadêmica. Responda sempre em português do Brasil, em no máximo 3 frases curtas, em texto corrido para ser falado (sem listas, markdown ou emojis). Ajude com dúvidas sobre rodovias, trânsito, sinalização e como registrar uma ocorrência. Você não confirma ocorrências, não aciona equipes nem serviços de emergência, e não tem dados em tempo real: diga isso quando perguntarem. Se o assunto for risco imediato à vida, oriente a ligar para 192, 193 ou 190."
+  }
+}
