@@ -122,12 +122,6 @@ raly-local/     servidor local de voz (Piper + Whisper) e ponte para o Ollama
 - Exemplos de comandos: "abrir tickets", "abrir SmartDeskAI", "veículo parado no acostamento, DEMO-101, km 42, sentido interior", "corrigir sentido para capital", "confirmar revisão", "criar ticket", "perguntar ao Prazy …". A lista completa fica em Raly › Voz e comandos.
 - O áudio não é gravado nem enviado a serviços externos quando o servidor local está ligado. Sem ele, o reconhecimento do Chrome/Edge usa um serviço online do navegador.
 
-## Deploy (Railway)
-
-1. No Railway, crie um projeto com **Deploy from GitHub repo** apontando para este repositório.
-2. O `railway.json` já define o build (`npm ci && npm run build`) e o start (`npm run start`, que serve `dist/` em `0.0.0.0:$PORT`).
-3. Em **Settings › Networking**, gere o domínio público.
-4. O `raly-local/` roda só na máquina do usuário; no Railway o Raly usa a voz do navegador.
 
 ## O que funciona e o que é representado
 
